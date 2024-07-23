@@ -1,4 +1,18 @@
 .Notifications {
-    border: 1px solid #e1354b;
-    padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 2px dashed #e1354b;
+  /* padding: 10px; */
+  width: 100%;
+  font-size: large;
 }
+
+[data-priority='default'] {
+    color: blue;
+  }
+  
+  [data-priority='urgent'] {
+    color: red;
+  }
+  

@@ -18,12 +18,12 @@ function App() {
 
         {/* ADDING INPUT FOR EMAIL AND PASSWORD AS WELL AS A BUTTON */}
 
-        <label htmlFor='email'>Email:</label>
+        <label htmlFor='email'>Email: </label>
         <input type='email' name='email' id='email'/>
 
         {/* Password */}
 
-        <label htmlFor='password'>Password:</label>
+        <label htmlFor='password'>Password: </label>
         <input type='password' name='password' id='password'/>
 
         {/* Button */}
