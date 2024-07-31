@@ -1,0 +1,32 @@
+.Notifications {
+  position: absolute;
+  /* top: 0;  */
+  right: 0;
+  border: 2px dotted red;
+  padding-top: rem;
+  /* padding: 10px; */
+  /* width: 100%; */
+  font-size: large;
+  /* display:  ${displayDrawer ? 'block' : 'none'}; */
+}
+
+[data-priority='default'] {
+  color: blue;
+}
+
+[data-priority='urgent'] {
+  color: red;
+}
+
+.menuItem {
+  text-align: right;
+  margin-bottom: 10px;
+  padding: 0rem;
+}
+
+.menuItem button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bolder;
+}

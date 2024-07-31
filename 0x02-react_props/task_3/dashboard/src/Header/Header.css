@@ -1,0 +1,31 @@
+.App-header {
+    background-color: white;
+    /* min-height: 100vh; */
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    font-size: calc(10px + 2vmin);
+    /* color: white; */
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 10rem;
+  }
+  
+  .App-header img {
+    height: 40vmin;
+    width: 40vmin;
+    float:right;
+  
+  }
+  
+  .App-header h1 {
+    color: red;
+  
+  }
+
+  hr {
+    border: 1px solid red;
+    margin-bottom: 20px;
+  }

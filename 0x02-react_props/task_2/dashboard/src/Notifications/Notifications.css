@@ -1,0 +1,17 @@
+.Notifications {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 2px dotted red;
+  /* padding: 10px; */
+  width: 100%;
+  font-size: large;
+}
+
+[data-priority='default'] {
+  color: blue;
+}
+
+[data-priority='urgent'] {
+  color: red;
+}

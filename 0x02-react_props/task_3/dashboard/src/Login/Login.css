@@ -1,0 +1,17 @@
+.App-body {
+    color: black;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-bottom: 20rem;
+  }
+
+hr {
+    border: 1px solid red;
+    margin-bottom: 20px;
+  }
+
+  /* Add spacing between email and password inputs */
+.App-body input {
+    margin-right: 10px;
+  }
