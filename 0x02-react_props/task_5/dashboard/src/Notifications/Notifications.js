@@ -4,9 +4,11 @@ import './Notifications.css';
 import { getLatestNotification } from '../utils';
 import closeIcon from '../close-icon.png';
 import NotificationItem from './NotificationItem';
+import NotificationItemShape from './NotificationItemShape';
 
-export default function Notifications() {
+export default function Notifications({ listNotifications }) {
     const [displayDrawer, setDisplayDrawer] = useState(true);
+    
     const handleButtonClick = () => {
         console.log('Close button has been clicked');
         setDisplayDrawer(!displayDrawer);
@@ -30,9 +32,18 @@ export default function Notifications() {
                     </button>
                     {/* Unordered list */}
                     <ul>
-                        <NotificationItem type="default" value="New course available" />
-                        <NotificationItem type="urgent"  value="New resume available" />
-                        <NotificationItem html={{ __html: getLatestNotification() }} />
+                    {listNotifications.length === 0 ? (
+                            <NotificationItem type="default" value="No new notification for now" />
+                        ) : (
+                            listNotifications.map((notification) => (
+                                <NotificationItem
+                                    key={notification.id}
+                                    type={notification.type}
+                                    value={notification.value}
+                                    html={notification.html}
+                                />
+                            ))
+                        )}
                     </ul>
                 </div>
             ) : null}
@@ -40,6 +51,14 @@ export default function Notifications() {
        
     );
 }
+
+Notifications.propTypes = {
+    listNotifications: PropTypes.arrayOf(NotificationItemShape),
+};
+
+Notifications.defaultProps = {
+    listNotifications: [],
+};
 
 Notifications.propTypes = {
     displayDrawer: PropTypes.bool.isRequired,
